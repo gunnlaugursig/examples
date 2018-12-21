@@ -21,12 +21,12 @@ public class KataController {
 		return repository.findAll();
 	}
 
-	@RequestMapping("/kata/name")
+	@RequestMapping("/kata/{name}")
 	public Kata findByName(@RequestParam(value = "name") String name) {
 		return repository.findByName(name);
 	}
 	
-	@RequestMapping("/kata/style")
+	@RequestMapping("/kata/{style}")
 	public List<Kata> findByStyle(@RequestParam(value = "style") String style) {
 		return repository.findByStyle(style);
 	}
