@@ -20,7 +20,7 @@ public class KataController {
 	public List<Kata> findAll() {
 		return repository.findAll();
 	}
-	
+
 	@RequestMapping("/kata/name")
 	public Kata findByName(@RequestParam(value = "name") String name) {
 		return repository.findByName(name);
